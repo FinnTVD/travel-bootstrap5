@@ -12,6 +12,8 @@ $('.section3__list').slick({
 
 // slick-slider section5
 $('.section5__list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
     infinite: false,
     speed: 500,
     fade: true,
@@ -19,22 +21,21 @@ $('.section5__list').slick({
     prevArrow: "<button type='button' class='slick-prev slick-section5 slick-section5-active slick-section5-prev'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
     nextArrow: "<button type='button' class='slick-next slick-section5 slick-section5-next'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
 })
-const btn_prev_Section5 = $(".slick-section5-prev")
-const btn_next_Section5 = $(".slick-section5-next")
+const btn_prev_Section5 = document.querySelector(".slick-section5-prev")
+const btn_next_Section5 = document.querySelector(".slick-section5-next")
 const slickSection5Active = "slick-section5-active"
 
 btn_prev_Section5.onclick = function () {
-    let isCheckSection5 = this.getAttribute("tabindex")
-    console.log(isCheckSection5)
-    if (isCheckSection5 === "0") {
+    let isCheckSection5 = this.getAttribute("aria-disabled")
+    if (isCheckSection5 === "true") {
         this.classList.add(slickSection5Active)
     } else {
         btn_next_Section5.classList.remove(slickSection5Active)
     }
 }
 btn_next_Section5.onclick = function () {
-    let isCheckSection5 = this.getAttribute("tabindex")
-    if (isCheckSection5 === "0") {
+    let isCheckSection5 = this.getAttribute("aria-disabled")
+    if (isCheckSection5 === "true") {
         this.classList.add(slickSection5Active)
     } else {
         btn_prev_Section5.classList.remove(slickSection5Active)
@@ -43,9 +44,9 @@ btn_next_Section5.onclick = function () {
 
 // modal click btn login
 
-const toastTrigger = $('#liveToastBtn')
-const toastLiveExample = $('#liveToast')
-const toastDtae = $('#toastDate')
+const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+const toastDate = document.getElementById('toastDate')
 function showTime(time) {
     return '⏰' + time.getHours() + ':' + time.getMinutes()
 }
@@ -57,3 +58,21 @@ if (toastTrigger) {
         toast.show()
     })
 }
+
+const btnTop = document.getElementById('btn__top')
+btnTop.addEventListener('click', () => {
+    window.scrollTo(
+        { top: 0, behavior: 'smooth' }
+    )
+})
+
+window.addEventListener('scroll', () => {
+    let currentScroll = $(document).scrollTop()
+    console.log(currentScroll)
+    if (currentScroll >= 1700) {
+        btnTop.style.display = 'block';
+    } else {
+        btnTop.style.display = 'none';
+    }
+})
+
