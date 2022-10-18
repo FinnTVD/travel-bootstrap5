@@ -1,0 +1,109 @@
+/* 992px <= Resposive < 1200px */
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .form-select {
+    width: 180px;
+    height: 52px;
+  }
+}
+
+/* Responsive >= 992px */
+@media (min-width: 992px) {
+  .section2__container {
+    margin-left: 100px;
+  }
+
+  .container.section3 {
+    padding-left: 100px;
+  }
+
+  .section4 {
+    margin-top: 136px;
+    margin-bottom: 200px;
+  }
+
+  .section4__container,
+  .section5__container {
+    padding-left: 88px;
+  }
+}
+
+/* Responsive >= 768px */
+@media (min-width: 768px) {
+}
+
+/* Responsive >= 576px */
+@media (min-width: 576px) {
+  .section3 .section3__list {
+    display: none;
+  }
+}
+
+/* Responsive < 992px */
+@media (max-width: 991.98px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: #b8becd;
+    align-self: center;
+    padding: 0 14px;
+  }
+  .btn__login {
+    border: 1px solid #fb8f1d;
+    color: #fb8f1d;
+    margin: 0 28px 0 14px;
+  }
+  .btn--size {
+    height: 40px;
+    width: 96px;
+  }
+}
+
+/* Responsive Tablet < 768px */
+@media (max-width: 767.98px) {
+  .navbar-nav.ms-auto {
+    align-items: center;
+  }
+
+  .navbar-nav.ms-auto > a {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .btn__login {
+    margin: 0 0 14px 0;
+  }
+
+  .btn--size {
+    width: 200px;
+  }
+}
+
+/* Responsive Smart< 576px */
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 11px 0;
+  }
+
+  .navbar__container {
+    height: 50px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .navbar-nav.ms-auto > a {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .btn__login {
+    margin: 0 0 12px 0;
+  }
+
+  .btn--size {
+    width: 180px;
+  }
+
+  .section3 .section3__view {
+    display: none;
+  }
+}
