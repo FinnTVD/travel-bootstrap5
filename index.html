@@ -24,78 +24,95 @@
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="container-fluid p-0">
+        <div class="container-fluid p-0 d-none d-lg-block container__marquee">
+            <marquee behavior="smooth" scrollamount="15" width="100%" direction="right" height="100%">
+                Build website with Framework Boostrap 5 !
+            </marquee>
+        </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-xl navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light">
-        <div class="container navbar__container">
-            <a class="navbar-brand" href="#"><img src="./images/logo/logo.png" alt="logo" class="navbar-logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Destinations</a>
-                    <a class="nav-link" href="#">About</a>
-                    <a class="nav-link" href="#">Parter</a>
-                    <button type="button" class="btn btn-outline btn--size btn__login" id="liveToastBtn">Login</button>
-                    <button type="button" class="btn btn-outline btn--size btn--default">Register</button>
-                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-header">
-                                <img src="./images/toast/R.png" class="rounded me-2" height="30px" alt="...">
-                                <strong class="me-auto">Login</strong>
-                                <small id="toastDate"></small>
-                                <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="toast-body">
-                                Không có đâu bé ơi 😅!
-                            </div>
-                        </div>
+        <!-- Navigation -->
+        <nav
+            class="container navbar navbar-expand-xl navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light nav__config">
+            <div class="container navbar__container">
+                <a class="navbar-brand" href="#"><img src="./images/logo/logo.png" alt="logo" class="navbar-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="#">Destinations</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Parter</a>
+                        <button type="button" class="btn btn-outline btn--size btn__login"
+                            id="liveToastBtn">Login</button>
+                        <button type="button" class="btn btn-outline btn--size btn--default">Register</button>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="./images/toast/R.png" class="rounded me-2" height="30px" alt="...">
+                <strong class="me-auto">Login</strong>
+                <small id="toastDate"></small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Không có đâu bé ơi 😅!
+            </div>
         </div>
-        </div>
-        </div>
-    </nav>
+    </div>
+
     <!-- Section 1 -->
     <div class="container section1">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <h1 class="section1__title">Exprole and<br>Travel</h1>
+            <div class="col-lg-6 col-12">
+                <h1 class="section1__title">Explore and<br>Travel</h1>
                 <span class="section1__category d-block py-lg-2">Holiday finder</span>
-                <div class="d-flex flex-row flex-wrap section1__select">
-                    <select class="form-select col-sm-6" aria-label="Default select example">
-                        <option selected>Location</option>
-                        <option value="1">Viet Nam</option>
-                        <option value="2">American</option>
-                        <option value="3">Germany</option>
-                    </select>
-                    <select class="form-select col-sm-6" aria-label="Default select example">
-                        <option selected>Activity</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <select class="form-select col-sm-6" aria-label="Default select example">
-                        <option selected>Grade</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                    <select class="form-select col-sm-6" aria-label="Default select example">
-                        <option selected>Date</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                <div class="row section1__select">
+                    <div class="col-6">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Location</option>
+                            <option value="1">Viet Nam</option>
+                            <option value="2">American</option>
+                            <option value="3">Germany</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Activity</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Grade</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Date</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
                 </div>
                 <button type="button" class="btn btn-outline btn--size btn--default">Explore</button>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 mt-md-5">
+            <div class="col-lg-6 col-12 section1__img">
                 <img src="./images/section1/thousand-01.png" width="100%" alt="thousand01">
             </div>
         </div>
@@ -104,10 +121,10 @@
     <!-- Section 2 -->
     <div class="container section2">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 mb-md-5">
-                <img src="./images/section2/Thousand-02.png" alt="thousand02" width="100%">
+            <div class="col-lg-6 col-md-6 col-sm-12 section2__img">
+                <img src="./images/section2/Thousand-02.png" alt="thousand02">
             </div>
-            <div class=" col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="section__container">
                     <h2 class="section__title">A new way to explore the<br>world</h2>
                     <p class="section__description ">For decades travellers have reached for Lonely
@@ -124,25 +141,25 @@
     <!-- Section 3 -->
     <div class="container section3">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 mb-lg-3">
+            <div class="col-6">
                 <h2 class="section__title">Featured destinations</h2>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 text-end mb-lg-3">
+            <div class="col-6 section__btn">
                 <button type="button" class="btn btn-outline btn--size btn--orange">View all ></button>
             </div>
         </div>
         <div class="row section3__view">
-            <div class="col-lg-3 col-md-3">
-                <img src="./images/section3/Raja ampat.png" alt="" width="100%">
+            <div class="col-lg-3 col-6">
+                <img src="./images/section3/Raja ampat.png" alt="">
             </div>
-            <div class="col-lg-3 col-md-3">
-                <img src="./images/section3/Fanjingshan.png" alt="" width="100%">
+            <div class="col-lg-3 col-6">
+                <img src="./images/section3/Fanjingshan.png" alt="">
             </div>
-            <div class="col-lg-3 col-md-3">
-                <img src="./images/section3/Vevey.png" alt="" width="100%">
+            <div class="col-lg-3 col-6">
+                <img src="./images/section3/Vevey.png" alt="">
             </div>
-            <div class="col-lg-3 col-md-3">
-                <img src="./images/section3/Skadar.png" alt="" width="100%">
+            <div class="col-lg-3 col-6">
+                <img src="./images/section3/Skadar.png" alt="">
             </div>
         </div>
         <div class="container section3__list">
@@ -156,7 +173,7 @@
     <!-- Section 4 -->
     <div class="container section4">
         <div class="row section4__container">
-            <div class="col-lg-6 col-md-12 col-sm-12 section4__content">
+            <div class="col-lg-6 col-12 section4__content">
                 <h2 class="section__title">Guides by Thousand
                     <br>Sunny
                 </h2>
@@ -166,7 +183,7 @@
                         href="https://www.figma.com/file/O9OXbVRA1whJXf1zRygM5C/tour-and-travel-website-for-figma"
                         class="section4__download">Dowload</a></button>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-12">
                 <img src="./images/section4/Thousand03.png" width="100%" alt="thousand03">
             </div>
         </div>
@@ -175,7 +192,7 @@
     <!-- Section 5 -->
     <div class="container section5">
         <div class="row section5__container">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-5 col-sm-12">
                 <h2 class="section__title">Testimonials</h2>
                 <img src="./images/section5/stars.png" class="pb-lg-4" alt="stars">
                 <p class="section5__description">“Quisque in lacus a urna fermentum<br>euismod. Integer mi nibh, dapibus
@@ -186,7 +203,7 @@
                 <span class="section5__founder d-block">Founder Circle</span>
 
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-7 col-sm-12">
                 <div class="section5__list">
                     <img src="./images/section5/photo.png" alt="author" class="section5__item">
                     <img src="https://th.bing.com/th/id/OIP.tB5ZSY9HY4JAOFQzm48lQAHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.25&pid=1.7"
@@ -203,13 +220,13 @@
     <!-- Section 6 -->
     <div class="container section6">
         <div class="row section6__container">
-            <div class="col-lg-6 col-md-6 col-sm-6 mb-lg-3">
+            <div class="col-6">
                 <h2 class="section__title">Trending stories</h2>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 text-end mb-lg-3">
+            <div class="col-6 section__btn">
                 <button type="button" class="btn btn-outline btn--size btn--orange">View all ></button>
             </div>
-            <article class="col-lg-3 col-md-3">
+            <article class="col-lg-3 col-md-6 col-sm-12">
                 <img src="./images/section6/image 12.png" alt="">
                 <h3>The many benefits of
                     taking a healing holiday</h3>
@@ -217,7 +234,7 @@
                     tohelp maximise your health and happines...</p>
                 <span>Read more</span>
             </article>
-            <article class="col-lg-3 col-md-3">
+            <article class="col-lg-3 col-md-6 col-sm-12">
                 <img src="./images/section6/image 13.png" alt="">
                 <h3>The best Kyoto restaurant
                     to try Japanese food</h3>
@@ -225,7 +242,7 @@
                     to visit...</p>
                 <span>Read more</span>
             </article>
-            <article class="col-lg-3 col-md-3">
+            <article class="col-lg-3 col-md-6 col-sm-12">
                 <img src="./images/section6/image 14.png" alt="">
                 <h3>Skip Chichen Itza and head
                     to this remote Yucatan</h3>
@@ -234,7 +251,7 @@
                     these ruins without the...</p>
                 <span>Read more</span>
             </article>
-            <article class="col-lg-3 col-md-3">
+            <article class="col-lg-3 col-md-6 col-sm-12">
                 <img src="./images/section6/image 15.png" alt="">
                 <h3>Surf's up at these beginner
                     spots around the world</h3>
@@ -249,37 +266,41 @@
     <!-- Footer -->
     <footer class="container">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 col-12 container__logo">
                 <a href="#"><img class="footer__logo d-block" src="./images/logo/logo.png" alt=""></a>
                 <p class="footer__slogan">Plan and book your perfect trip with<br>expert advice, travel tips
                     destination<br>
                     information from us</p>
                 <span class="footer__copyright">©2020 Thousand Sunny. All rights reserved</span>
             </div>
-            <div class="col-lg-2">
-                <h5 class="footer__title">Destinations</h5>
-                <span class="footer__item d-block">Africa</span>
-                <span class="footer__item d-block">Antarctica</span>
-                <span class="footer__item d-block">Asia</span>
-                <span class="footer__item d-block">Europe</span>
-                <span class="footer__item d-block">America</span>
+            <div class="row col-lg-7 col-12 row__config">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h5 class="footer__title">Destinations</h5>
+                    <span class="footer__item d-block">Africa</span>
+                    <span class="footer__item d-block">Antarctica</span>
+                    <span class="footer__item d-block">Asia</span>
+                    <span class="footer__item d-block">Europe</span>
+                    <span class="footer__item d-block">America</span>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 ps-lg-4">
+                    <h5 class="footer__title">Shop</h5>
+                    <span class="footer__item d-block">Destination Guides</span>
+                    <span class="footer__item d-block">Pictorial & Gifts</span>
+                    <span class="footer__item d-block">Special Offers</span>
+                    <span class="footer__item d-block">Delivery Times</span>
+                    <span class="footer__item d-block">FAQs</span>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 ps-lg-5">
+                    <h5 class="footer__title">Interests</h5>
+                    <span class="footer__item d-block">Adventure Travel</span>
+                    <span class="footer__item d-block">Art And Culture</span>
+                    <span class="footer__item d-block">Wildlife And Nature</span>
+                    <span class="footer__item d-block">Family Holidays</span>
+                    <span class="footer__item d-block">Food And Drink</span>
+                </div>
             </div>
-            <div class="col-lg-2 ps-4">
-                <h5 class="footer__title">Shop</h5>
-                <span class="footer__item d-block">Destination Guides</span>
-                <span class="footer__item d-block">Pictorial & Gifts</span>
-                <span class="footer__item d-block">Special Offers</span>
-                <span class="footer__item d-block">Delivery Times</span>
-                <span class="footer__item d-block">FAQs</span>
-            </div>
-            <div class="col-lg-3 ps-5">
-                <h5 class="footer__title">Interests</h5>
-                <span class="footer__item d-block">Adventure Travel</span>
-                <span class="footer__item d-block">Art And Culture</span>
-                <span class="footer__item d-block">Wildlife And Nature</span>
-                <span class="footer__item d-block">Family Holidays</span>
-                <span class="footer__item d-block">Food And Drink</span>
-            </div>
+        </div>
+        <div class="row">
             <hr class="footer__line">
             <div class="footer__list">
                 <span><a href="#"><i class="fa-brands fa-twitter"></i></a></span>

@@ -25,6 +25,7 @@ const btn_prev_Section5 = document.querySelector(".slick-section5-prev")
 const btn_next_Section5 = document.querySelector(".slick-section5-next")
 const slickSection5Active = "slick-section5-active"
 
+// custom active button
 btn_prev_Section5.onclick = function () {
     let isCheckSection5 = this.getAttribute("aria-disabled")
     if (isCheckSection5 === "true") {
@@ -59,12 +60,21 @@ if (toastTrigger) {
     })
 }
 
-const btnTop = document.getElementById('btn__top')
-btnTop.addEventListener('click', () => {
-    window.scrollTo(
-        { top: 0, behavior: 'smooth' }
-    )
-})
+// show marquee on screen width >= 992px
+if (window.innerWidth >= 992) {
+    window.addEventListener('scroll', () => {
+        let currentScroll = $(document).scrollTop()
+        const nav = document.querySelector(".nav__config")
+        const marquee = document.querySelector(".container__marquee")
+        if (currentScroll <= 144) {
+            nav.style.top = "23.2px"
+            marquee.style.top = "0"
+        } else if (currentScroll > 144) {
+            marquee.style.top = "-24px"
+            nav.style.top = "0"
+        }
+    })
+}
 
 window.addEventListener('scroll', () => {
     let currentScroll = $(document).scrollTop()
@@ -76,3 +86,9 @@ window.addEventListener('scroll', () => {
     }
 })
 
+const btnTop = document.getElementById('btn__top')
+btnTop.addEventListener('click', () => {
+    window.scrollTo(
+        { top: 0, behavior: 'smooth' }
+    )
+})

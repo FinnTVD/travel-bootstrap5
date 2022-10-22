@@ -6,9 +6,32 @@ body {
   scroll-behavior: smooth;
 }
 
+::-moz-selection {
+  background-color: #1abe84;
+  color: #fff;
+}
+
 ::selection {
   background-color: #1abe84;
   color: #fff;
+}
+
+/* <!-- Header --> */
+.container__marquee {
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(to bottom, #1abe84, #ffffff);
+  user-select: none;
+}
+
+header .nav__config {
+  position: fixed !important;
+  margin: 0 auto;
+  background-color: #ffffff;
+  left: 50%;
+  top: 23.2px;
+  transform: translateX(-50%);
+  z-index: 999999;
 }
 
 /* <!-- Navigation --> */
@@ -25,6 +48,10 @@ body {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
   color: #202336;
+}
+
+.navbar-brand {
+  user-select: none;
 }
 
 .btn--size {
@@ -45,8 +72,9 @@ body {
 
 /* <!-- Section 1 --> */
 .section1 {
-  padding-top: 64px;
+  margin-top: 100px;
   margin-bottom: 200px;
+  padding-top: 64px;
 }
 
 .section1__title {
@@ -61,12 +89,10 @@ body {
 }
 
 .section1__select {
-  gap: 35px 30px;
+  gap: 35px 0;
 }
 
 .form-select {
-  width: 220px;
-  height: 52px;
   font-size: 15px;
   font-weight: 400;
   color: #4a4c53;
@@ -97,15 +123,31 @@ body {
   height: 48px;
 }
 
+.section2__img > img {
+  width: 100%;
+}
+
 /* <!-- Section 3 --> */
 .section3 {
   margin-top: 200px;
   padding-bottom: 64px;
 }
 
+.section3__view > div > img {
+  width: 100%;
+}
+
+.section__btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .btn--orange {
+  text-align: end;
+  padding: 0;
   height: 60px;
-  font-style: 17px;
+  font-size: 17px;
   font-weight: 600;
   color: #fb8f1d;
 }
@@ -141,12 +183,12 @@ body {
   margin-left: 100px;
   position: relative;
   overflow: hidden;
+  border-radius: 16px;
 }
 
 .section5__list .section5__item {
   width: 384px;
   height: 491px;
-  border-radius: 16px;
 }
 
 .section5__list::before {
@@ -220,6 +262,8 @@ article > p {
 }
 
 article > span {
+  display: block;
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 12px;
@@ -239,6 +283,7 @@ footer .footer__logo {
   padding: 8px;
   margin-left: -8px;
   cursor: pointer;
+  user-select: none;
 }
 
 footer .footer__slogan {
@@ -264,7 +309,6 @@ footer .footer__item {
 
 footer .footer__line {
   margin: 80px 0 0 0;
-  border-color: #c4c4c4;
 }
 
 footer .footer__list {
