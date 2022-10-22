@@ -6,6 +6,18 @@ body {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #1abe84, #ffffff);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 ::-moz-selection {
   background-color: #1abe84;
   color: #fff;
@@ -189,6 +201,7 @@ header .nav__config {
 .section5__list .section5__item {
   width: 384px;
   height: 491px;
+  cursor: grab;
 }
 
 .section5__list::before {
