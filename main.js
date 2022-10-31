@@ -1,3 +1,4 @@
+"use strict"
 // slick-slider visible only smart phone
 $('.section3__list').slick({
     infinite: false,
@@ -61,29 +62,23 @@ if (toastTrigger) {
 }
 
 // show marquee on screen width >= 992px
-if (window.innerWidth >= 992) {
-    window.addEventListener('scroll', () => {
-        let currentScroll = $(document).scrollTop()
-        const nav = document.querySelector(".nav__config")
-        const marquee = document.querySelector(".container__marquee")
-        if (currentScroll <= 144) {
-            nav.style.top = "23.2px"
-            marquee.style.top = "0"
-        } else if (currentScroll > 144) {
-            marquee.style.top = "-24px"
-            nav.style.top = "0"
-        }
-    })
-}
-
 window.addEventListener('scroll', () => {
     let currentScroll = $(document).scrollTop()
-    console.log(currentScroll)
+    const nav = document.querySelector(".nav__config")
+    const marquee = document.querySelector(".container__marquee")
+    if (currentScroll <= 144 && window.innerWidth >= 992) {
+        nav.style.top = "23.2px"
+        marquee.style.top = "0"
+    } else if (currentScroll > 144 && window.innerWidth >= 992) {
+        marquee.style.top = "-24px"
+        nav.style.top = "0"
+    }
     if (currentScroll >= 1700) {
         btnTop.style.display = 'block';
     } else {
         btnTop.style.display = 'none';
     }
+
 })
 
 const btnTop = document.getElementById('btn__top')
@@ -92,3 +87,13 @@ btnTop.addEventListener('click', () => {
         { top: 0, behavior: 'smooth' }
     )
 })
+
+$(document).ready(function () {
+    const navWidth = document.querySelector(".section1").offsetWidth
+    const nav = document.querySelector(".nav__config")
+    const toast = document.querySelector(".toast-container")
+
+    nav.style.width = navWidth + "px"
+    toast.style.width = navWidth + "px"
+});
+
